@@ -4,7 +4,7 @@ import domain.Product;
 import domain.intefaces.DataRepository;
 import domain.properties.Money;
 
-//return "C:\\games\\EcommerceMaven\\src\\main\\resources\\" + fileName +".bin" ;
+
 import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.Date;
 
 
-@SuppressWarnings("unchecked")
+
 public class Data implements DataRepository {
 
     private Data() {}

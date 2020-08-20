@@ -15,9 +15,9 @@ public class ProductFactory {
     private static Integer productCount = 0;
 
 
-    public static Product getProduct(String name, Money price, Integer quantity, Integer expritaionM, Integer expritaionD, String manufactured, Category category) {
+    public static Product getProduct(String name, Money price, Integer quantity, Integer expritaionM, Integer expritaionD, String manufactured, Category category,String imagePath) {
 
-        return new Product(++productCount, name, price, quantity, expritaionM, expritaionD, manufactured, category);
+        return new Product(++productCount, name, price, quantity, expritaionM, expritaionD, manufactured, category,imagePath);
     }
 
 
@@ -30,7 +30,8 @@ public class ProductFactory {
                 faker.number().numberBetween(1, 12),
                 faker.number().numberBetween(1, 31),
                 faker.country().capital(),
-                new Category(faker.commerce().department()));
+                new Category(faker.commerce().department()),
+                "\\resources\\iamges");
 
     }
 

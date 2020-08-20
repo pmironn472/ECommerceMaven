@@ -16,13 +16,14 @@ public class Product implements Serializable {
     private Integer expritaionD;
     private String manufactured;
     private Category category;
+    private String imagePath;
 
     Product() {
 
     }
 
 
-    Product(Integer id , String name, Money price, Integer quantity, Integer expritaionM, Integer expritaionD, String manufactured, Category category) {
+    Product(Integer id , String name, Money price, Integer quantity, Integer expritaionM, Integer expritaionD, String manufactured, Category category,String imagePath) {
         this.id=id;
         this.name = name;
         this.price = price;
@@ -31,6 +32,8 @@ public class Product implements Serializable {
         this.expritaionD = expritaionD;
         this.manufactured = manufactured;
         this.category = category;
+        this.imagePath = imagePath;
+
     }
 
     public String getName() {
@@ -93,6 +96,14 @@ public class Product implements Serializable {
         return id;
     }
 
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
+
     public String toString() {
         return String.format("Product [ Id = %d," +
                         "%n          Name = %s "+
@@ -101,8 +112,9 @@ public class Product implements Serializable {
                         "%n          Expiration date = %s MONTH." +
                         "%s DAY," +
                         "%n          Manufacturer = %s," +
-                        "%n          Category = %s ]%n",id, name, price, quantity,
-                expritaionM, expritaionD, manufactured, category);
+                        "%n          Category = %s " +
+                        "%n          Image = %s ]%n",id, name, price, quantity,
+                expritaionM, expritaionD, manufactured, category,imagePath);
     }
 
 

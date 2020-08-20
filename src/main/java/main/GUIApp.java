@@ -20,12 +20,19 @@ import java.awt.*;
 
 
 public class GUIApp extends Application {
+
+
+    public static VBox showProduct;
+    private static VBox addProduct;
+
+    private static Stage primaryStage;
+
     public static void main(String[] args) {
-
-        Product product = ProductFactory.getProduct("Women T-shirt", new Money("USD", 100f), 2, new Faker().number().numberBetween(1, 12), new Faker().number().numberBetween(1, 30), "Moldova", new Category("Boks"), "/resources/iamges/product1.png");
-
-        Product fakeProduct = ProductFactory.getFakeProduct();
-//        product.setPrice(product.getPrice().toCurrency("MDL"));
+//
+//        Product product = ProductFactory.getProduct("Women T-shirt", new Money("USD", 100f), 2, new Faker().number().numberBetween(1, 12), new Faker().number().numberBetween(1, 30), "Moldova", new Category("Boks"), "src/main/resources/iamges/product1.png");
+//
+//        Product fakeProduct = ProductFactory.getFakeProduct();
+////        product.setPrice(product.getPrice().toCurrency("MDL"));
 //        Cart.getInstance().add(product);
 //        Cart.getInstance().add(fakeProduct);
 //        Cart.getInstance().findById(2).setPrice(new Money("USD",276f));
@@ -33,19 +40,19 @@ public class GUIApp extends Application {
 //        Cart.getInstance().findAll().forEach(System.out::println);
 //        System.out.println(Cart.getInstance().getTotal());
 
-        Data.getInstance().save(product);
-        product = Data.getInstance().load(Product.class);
-        System.out.println(product);
-
-        Money money = Money.getInstance().getMoney(1000);
-        Data.getInstance().save(money);
-        money = Data.getInstance().load(Money.class);
-        System.out.println(money);
+//        Data.getInstance().save(product);
+//        product = Data.getInstance().load(Product.class);
+//        System.out.println(product);
+//
+//        Money money = Money.getInstance().getMoney(1000);
+//        Data.getInstance().save(money);
+//        money = Data.getInstance().load(Money.class);
+//        System.out.println(money);
 
         launch();
 
 
-//        mvn clean javafx:run
+//        mvn clean javafx:run\
 
 
     }
@@ -54,8 +61,17 @@ public class GUIApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        VBox box = FXMLLoader.load(getClass().getResource("/product-full.fxml"));
-        stage.setScene(new Scene(box));
+        GUIApp.primaryStage = stage;
+
+        addProduct = FXMLLoader.load(getClass().getResource("/product-add.fxml"));
+        showProduct = FXMLLoader.load(getClass().getResource("/product-full.fxml"));
+        switchScene(addProduct);
         stage.show();
+    }
+
+    public static void switchScene(VBox tempalte) {
+        Scene scene = new Scene(tempalte);
+        primaryStage.setScene(scene);
+
     }
 }

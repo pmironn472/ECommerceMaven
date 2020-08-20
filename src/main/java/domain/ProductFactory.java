@@ -20,6 +20,11 @@ public class ProductFactory {
         return new Product(++productCount, name, price, quantity, expritaionM, expritaionD, manufactured, category,imagePath);
     }
 
+    public static Product getProducts(String name, Money price, Integer quantity, Integer expritaionM, Integer expritaionD, String manufactured, Category category) {
+
+        return new Product(++productCount, name, price, quantity, expritaionM, expritaionD, manufactured, category);
+    }
+
 
     public static Product getFakeProduct() {
         return new Product(
@@ -31,7 +36,7 @@ public class ProductFactory {
                 faker.number().numberBetween(1, 31),
                 faker.country().capital(),
                 new Category(faker.commerce().department()),
-                "\\resources\\iamges");
+                "src/main/resources/iamges/product1.png");
 
     }
 

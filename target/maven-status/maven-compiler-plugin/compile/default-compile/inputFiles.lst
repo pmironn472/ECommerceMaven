@@ -1,12 +1,13 @@
 C:\games\EcommerceMaven\src\main\java\domain\repository\Data.java
-C:\games\EcommerceMaven\src\main\java\domain\Product.java
 C:\games\EcommerceMaven\src\main\java\domain\intefaces\DataRepository.java
 C:\games\EcommerceMaven\src\main\java\domain\properties\Money.java
-C:\games\EcommerceMaven\src\main\java\main\GUIApp.java
 C:\games\EcommerceMaven\src\main\java\domain\controllers\ProductViewController.java
 C:\games\EcommerceMaven\src\main\java\domain\intefaces\ProductRepository.java
 C:\games\EcommerceMaven\src\main\java\domain\properties\curency\CurrencyProvider.java
+C:\games\EcommerceMaven\src\main\java\domain\controllers\AddProductController.java
 C:\games\EcommerceMaven\src\main\java\domain\ProductFactory.java
+C:\games\EcommerceMaven\src\main\java\domain\properties\curency\Currency.java
+C:\games\EcommerceMaven\src\main\java\domain\Product.java
+C:\games\EcommerceMaven\src\main\java\main\GUIApp.java
 C:\games\EcommerceMaven\src\main\java\domain\repository\Cart.java
 C:\games\EcommerceMaven\src\main\java\domain\properties\Category.java
-C:\games\EcommerceMaven\src\main\java\domain\properties\curency\Currency.java

@@ -20,10 +20,22 @@ public class Product implements Serializable {
 
     Product() {
 
+
+
     }
 
+    public Product(Integer id, String name, Money price, Integer quantity, Integer expritaionM, Integer expritaionD, String manufactured, Category category) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+        this.expritaionM = expritaionM;
+        this.expritaionD = expritaionD;
+        this.manufactured = manufactured;
+        this.category = category;
+    }
 
-    Product(Integer id , String name, Money price, Integer quantity, Integer expritaionM, Integer expritaionD, String manufactured, Category category,String imagePath) {
+    Product(Integer id , String name, Money price, Integer quantity, Integer expritaionM, Integer expritaionD, String manufactured, Category category, String imagePath) {
         this.id=id;
         this.name = name;
         this.price = price;
@@ -115,6 +127,14 @@ public class Product implements Serializable {
                         "%n          Category = %s " +
                         "%n          Image = %s ]%n",id, name, price, quantity,
                 expritaionM, expritaionD, manufactured, category,imagePath);
+    }
+
+    private static class SingletonHolder {
+        private final static Product INSTANCE = new Product();
+    }
+
+    public static Product getInstance(){
+        return Product.SingletonHolder.INSTANCE;
     }
 
 

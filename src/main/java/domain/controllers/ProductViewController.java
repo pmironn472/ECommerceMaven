@@ -27,7 +27,7 @@ public class ProductViewController {
     public void showProduct() {
         product = Data.getInstance().load(Product.class);
         productName.setText(product.getName());
-        File image = new File("src/main/resources/iamges/product1.png");
+        File image = new File(product.getImagePath());
         productIamge.setImage(new Image(image.toURI().toString()));
 
 

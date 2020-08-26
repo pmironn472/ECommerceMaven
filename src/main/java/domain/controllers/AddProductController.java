@@ -46,7 +46,7 @@ public class AddProductController {
 
     public void addProduct() {
 
-        product = ProductFactory.getProducts(productName.getText(), new Money(currency.getText(), Float.valueOf(productPrice.getText())), Integer.parseInt(productQty.getText()), Integer.valueOf(expritaionM.getText()), Integer.valueOf(expritaionD.getText()), manufactured.getText(), new Category(category.getText()));
+        product = ProductFactory.getProduct(Integer.parseInt(productQty.getText()),productName.getText(), new Money(currency.getText(), Float.valueOf(productPrice.getText())), Integer.parseInt(productQty.getText()), manufactured.getText(), new Category(category.getText()));
 
         Data.getInstance().save(product);
         System.out.println("Product was added");

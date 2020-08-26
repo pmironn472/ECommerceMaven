@@ -9,10 +9,10 @@ public class CurrencyProvider {
 
     private Map<String, Currency> currencies = new HashMap<>() {{
         put("EUR", Currency.baseCurrency);
-        put("USD", new Currency("USD", 16.97));
-        put("MDL", new Currency("MDL", 19.63));
-        put("RUB", new Currency("RUB", 81.96));
-        put("RON", new Currency("RON", 4.84));
+        put("USD", new Currency(1,"USD", 16.97));
+        put("MDL", new Currency(2,"MDL", 19.63));
+        put("RUB", new Currency(3,"RUB", 81.96));
+        put("RON", new Currency(4,"RON", 4.84));
     }};
 
     public CurrencyProvider() {

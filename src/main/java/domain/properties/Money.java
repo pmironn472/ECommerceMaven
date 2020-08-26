@@ -13,6 +13,8 @@ public class Money implements Serializable {
 
     private Currency currencyCode;
     private Float amount;
+    private Integer id;
+
 
     public Money() {
     }
@@ -23,9 +25,24 @@ public class Money implements Serializable {
     }
 
 
+    public Money(Integer id, String currencyCode, Float amount) {
+        this.id = id;
+        this.currencyCode = currencyProvider.getCurrency(currencyCode);
+        this.amount = amount;
+    }
+
     public Money(String currencyCode, Float amount) {
         this.currencyCode = currencyProvider.getCurrency(currencyCode);
         this.amount = amount;
+    }
+
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Currency getCurrency() {
@@ -51,9 +68,9 @@ public class Money implements Serializable {
         Currency currency1 = currencyProvider.getCurrency(currency);
 
         if (currencyCode.getCode().equals("EUR"))
-            return new Money(currency1.getCode(), amount * (float) currency1.getRate());
+            return new Money(currency1.getId(), currency1.getCode(), amount * (float) currency1.getRate());
         else
-            return new Money(currency, amount * (float) currency1.getRate());
+            return new Money(currency1.getId(), currency1.getCode(), amount * (float) currency1.getRate());
 
 
     }
@@ -65,14 +82,14 @@ public class Money implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("%.2f %s", amount, currencyCode);
+        return String.format("%.2f %s", amount, currencyCode.getCode());
     }
 
     private static class SingletonHolder {
         private final static Money INSTANCE = new Money();
     }
 
-    public static Money getInstance(){
+    public static Money getInstance() {
         return Money.SingletonHolder.INSTANCE;
     }
 

@@ -1,6 +1,7 @@
 domain\properties\curency\CurrencyProvider.class
 domain\repository\Cart.class
 domain\repository\Data$SingletonHolder.class
+domain\intefaces\JdbcCRUD.class
 domain\properties\curency\CurrencyProvider$SingletonHolder.class
 domain\properties\Money$SingletonHolder.class
 domain\properties\Category.class
@@ -8,6 +9,7 @@ domain\ProductFactory$SingletonHolder.class
 domain\intefaces\DataRepository.class
 domain\Product.class
 domain\repository\Cart$SingletonHolder.class
+DAO\ProductRepository.class
 domain\properties\curency\Currency.class
 domain\controllers\AddProductController.class
 main\GUIApp.class
@@ -15,6 +17,7 @@ domain\properties\Money.class
 domain\repository\Data.class
 domain\controllers\ProductViewController.class
 domain\ProductFactory.class
+domain\jdbc\JDBSCrud.class
 domain\intefaces\ProductRepository.class
 domain\Product$SingletonHolder.class
 domain\properties\curency\CurrencyProvider$1.class

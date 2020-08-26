@@ -5,8 +5,11 @@ C:\games\EcommerceMaven\src\main\java\domain\controllers\ProductViewController.j
 C:\games\EcommerceMaven\src\main\java\domain\intefaces\ProductRepository.java
 C:\games\EcommerceMaven\src\main\java\domain\properties\curency\CurrencyProvider.java
 C:\games\EcommerceMaven\src\main\java\domain\controllers\AddProductController.java
+C:\games\EcommerceMaven\src\main\java\domain\intefaces\JdbcCRUD.java
 C:\games\EcommerceMaven\src\main\java\domain\ProductFactory.java
 C:\games\EcommerceMaven\src\main\java\domain\properties\curency\Currency.java
+C:\games\EcommerceMaven\src\main\java\DAO\ProductRepository.java
+C:\games\EcommerceMaven\src\main\java\domain\jdbc\JDBSCrud.java
 C:\games\EcommerceMaven\src\main\java\domain\Product.java
 C:\games\EcommerceMaven\src\main\java\main\GUIApp.java
 C:\games\EcommerceMaven\src\main\java\domain\repository\Cart.java

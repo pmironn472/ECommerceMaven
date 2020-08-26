@@ -143,7 +143,7 @@ public class JDBCDAORepository implements JdbcDAO {
 
     @Override
     public void update(String table, String columnName, String name, Integer id) throws SQLException {
-        String insert = "Update Products set " + columnName + "  = '" + name + "' where id = " + id;
+        String insert = "Update "+ table + " set " + columnName + "  = '" + name + "' where id = " + id;
         Statement statement = conn.createStatement();
         statement.executeUpdate(insert);
     }
